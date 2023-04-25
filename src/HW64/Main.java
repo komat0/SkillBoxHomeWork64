@@ -13,7 +13,9 @@ public class Main {
         company1.hire(operator1);
         company1.hire(manager1);
         company1.getIncome();
+        company1.retire(manager1);
         company1.getEmp();
+        company1.printAllEmployeesWithSalaries();
 
 
 

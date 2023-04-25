@@ -6,7 +6,7 @@ import java.util.List;
 public class Company {
     private final String companyName;
     private double income;
-    private List<Employee> emp = new ArrayList<>();
+    private List<Employee> employees = new ArrayList<>();
 
     public Company(String companyName, double income) {
         this.companyName = companyName;
@@ -15,18 +15,18 @@ public class Company {
 
     public void hire(Employee employee) {
         System.out.println("Нанят сотрудник");
-        emp.add(employee);
+        employees.add(employee);
     }
 
     public void hireAll(List employeesList) {
         for (Object o : employeesList) {
-            emp.add((Employee) o);
+            employees.add((Employee) o);
         }
     }
 
-    public void fire(Employee employee) {
-        if (emp.contains(employee)) {
-            emp.remove(employee);
+    public void retire(Employee employee) {
+        if (employees.contains(employee)) {
+            employees.remove(employee);
             System.out.println("Сотрудник уволен");
         }
     }
@@ -49,9 +49,13 @@ public class Company {
 //        return null;
 //    }
 
-    public void getEmp() {
-        for (Employee employee : emp) {
-            System.out.println(employee);
+    public void printAllEmployeesWithSalaries() {
+        System.out.println("Список сотрудников компании " + companyName + ":");
+        for (Employee employee : employees) {
+            System.out.println(employee.getClass().getSimpleName() +
+                               " " + employee.getName() + ", зарплата: " +
+                               employee.getSalary());
         }
     }
+
 }

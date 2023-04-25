@@ -23,4 +23,5 @@ public class Manager implements Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
 }
