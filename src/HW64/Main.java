@@ -13,20 +13,22 @@ public class Main {
 //        company1.hire(topManager1);
 
         ListToAdd.addEmployeesToArrayList();
-//        ListToAdd.printAllEmployeesWithSalaries();
 
         company1.hireAll(ListToAdd.listToHireAll);
 
-        company1.printAllEmployeesWithSalaries();
+//        company1.printAllEmployeesWithSalaries();
+        System.out.println("====");
         company1.getLowestSalaryStaff(10);
         System.out.println("====");
         company1.getTopSalaryStaff(10);
+
 //        !!! Не печатает из метода!!!
 //        company1.employeesSize();
 
-//        System.out.printf("%.2f%n", company1.getIncome());
-//        System.out.printf("%.2f%n", operator1.getMonthSalary(company1));
-//        System.out.printf("%.2f%n", manager1.getMonthSalary(company1));
-//        System.out.printf("%.2f%n", topManager1.getMonthSalary(company1));
+        company1.printEmployeesSize();
+        for (int i = 0; i < company1.getEmployeesSize() / 2; i++) {
+            int randomChooser = (int) (1 + (Math.random() * company1.getEmployeesSize()));
+//            company1.retire(Employee re);
+        }
     }
 }

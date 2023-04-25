@@ -38,7 +38,7 @@ public class Company {
     }
 
     List<Employee> getTopSalaryStaff(int count) {
-        employees.sort(Employee::compareTo);
+        employees.sort(Collections.reverseOrder());
         List<Employee> topSalaryStaff = employees.subList(0, count);
         for (Employee employee : topSalaryStaff) {
             System.out.printf(employee.getName() + ", зарплата: " +
@@ -49,12 +49,12 @@ public class Company {
 
     List<Employee> getLowestSalaryStaff(int count) {
         employees.sort(Employee::compareTo);
-        List<Employee> topSalaryStaff = employees.subList(0, count);
-        for (Employee employee : topSalaryStaff) {
+        List<Employee> lowestSalaryStaff = employees.subList(0, count);
+        for (Employee employee : lowestSalaryStaff) {
             System.out.printf(employee.getName() + ", зарплата: " +
                               "%.2f%n", employee.getSalary());
         }
-        return topSalaryStaff;
+        return lowestSalaryStaff;
     }
 
     public void printAllEmployeesWithSalaries() {
@@ -70,7 +70,11 @@ public class Company {
         return employees;
     }
 
-    public void employeesSize() {
+    public int getEmployeesSize() {
+        return employees.size();
+    }
+
+    public void printEmployeesSize() {
         System.out.println(employees.size());
     }
 }

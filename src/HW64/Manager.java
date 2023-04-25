@@ -36,10 +36,5 @@ public class Manager implements Employee {
     public int compareTo(Employee employee) {
         return Double.compare(getSalary(), employee.getSalary());
     }
-// ПОЧЕМУ ТРЕБУЕТ ИМЕННО ТАКОЙ ФОРМАТ?
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

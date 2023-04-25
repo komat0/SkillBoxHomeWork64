@@ -1,6 +1,6 @@
 package HW64;
 
-public interface Employee extends Comparable {
+public interface Employee extends Comparable<Employee> {
 
     double getMonthSalary(Company company);
 
