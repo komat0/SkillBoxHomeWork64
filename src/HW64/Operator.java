@@ -1,7 +1,7 @@
 package HW64;
 
 public class Operator implements Employee {
-    private String name;
+    private final String name;
     private double salary;
 
     public Operator(String name, double salary) {
@@ -9,13 +9,18 @@ public class Operator implements Employee {
         this.salary = salary;
     }
 
+    @Override
+    public double getMonthSalary(Company company) {
+        return salary;
+    }
+
+    @Override
     public String getName() {
-        System.out.println(name);
         return name;
     }
 
+    @Override
     public double getSalary() {
-        System.out.println("Зарплата " + name + " составляет " + salary);
         return salary;
     }
 

@@ -2,9 +2,7 @@ package HW64;
 
 public interface Employee {
 
-    static void getMonthSalary() {
-
-    }
+    double getMonthSalary(Company company);
 
     String getName();
 
