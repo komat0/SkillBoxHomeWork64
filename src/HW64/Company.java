@@ -42,7 +42,8 @@ public class Company {
         List<Employee> topSalaryStaff = employees.subList(0, count);
         for (Employee employee : topSalaryStaff) {
             System.out.printf(employee.getName() + ", зарплата: " +
-                              "%.2f%n", employee.getSalary());        }
+                              "%.2f%n", employee.getSalary());
+        }
         return topSalaryStaff;
     }
 
