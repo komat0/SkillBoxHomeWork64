@@ -1,7 +1,5 @@
 package HW64;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -20,7 +18,12 @@ public class Main {
         company1.hireAll(ListToAdd.listToHireAll);
 
         company1.printAllEmployeesWithSalaries();
-        company1.employeesSize();
+        company1.getLowestSalaryStaff(10);
+        System.out.println("====");
+        company1.getTopSalaryStaff(10);
+//        !!! Не печатает из метода!!!
+//        company1.employeesSize();
+
 //        System.out.printf("%.2f%n", company1.getIncome());
 //        System.out.printf("%.2f%n", operator1.getMonthSalary(company1));
 //        System.out.printf("%.2f%n", manager1.getMonthSalary(company1));

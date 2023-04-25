@@ -33,4 +33,14 @@ public class TopManager implements Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
+    @Override
+    public int compareTo(Employee employee) {
+        return Double.compare(getSalary(), employee.getSalary());
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }

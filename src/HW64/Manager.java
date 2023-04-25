@@ -32,4 +32,14 @@ public class Manager implements Employee {
         this.salary = salary;
     }
 
+    @Override
+    public int compareTo(Employee employee) {
+        return Double.compare(getSalary(), employee.getSalary());
+    }
+// ПОЧЕМУ ТРЕБУЕТ ИМЕННО ТАКОЙ ФОРМАТ?
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }

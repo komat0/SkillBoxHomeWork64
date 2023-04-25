@@ -1,7 +1,6 @@
 package HW64;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Company {
     private final String companyName;
@@ -38,13 +37,23 @@ public class Company {
         this.income = newIncome;
     }
 
-    static List<Employee> getTopSalaryStaff(int count) {
-        return null;
+    List<Employee> getTopSalaryStaff(int count) {
+        employees.sort(Employee::compareTo);
+        List<Employee> topSalaryStaff = employees.subList(0, count);
+        for (Employee employee : topSalaryStaff) {
+            System.out.printf(employee.getName() + ", зарплата: " +
+                              "%.2f%n", employee.getSalary());        }
+        return topSalaryStaff;
     }
 
-
-    static List<Employee> getLowestSalaryStaff(int count) {
-        return null;
+    List<Employee> getLowestSalaryStaff(int count) {
+        employees.sort(Employee::compareTo);
+        List<Employee> topSalaryStaff = employees.subList(0, count);
+        for (Employee employee : topSalaryStaff) {
+            System.out.printf(employee.getName() + ", зарплата: " +
+                              "%.2f%n", employee.getSalary());
+        }
+        return topSalaryStaff;
     }
 
     public void printAllEmployeesWithSalaries() {
@@ -56,7 +65,12 @@ public class Company {
         }
     }
 
+    public List<Employee> getCompanyList() {
+        return employees;
+    }
+
     public void employeesSize() {
         System.out.println(employees.size());
     }
 }
+
