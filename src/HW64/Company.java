@@ -81,5 +81,9 @@ public class Company {
     public Employee getEmployerByIndex(int i) {
         return employees.get(i);
     }
+
+    public void sortColl() {
+        employees.sort(Comparator.comparing(Employee::getName).thenComparing(Employee::getSalary));
+    }
 }
 
