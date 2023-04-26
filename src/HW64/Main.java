@@ -10,8 +10,10 @@ public class Main {
         Operator operator4 = new Operator("Operator1", 2000);
         Operator operator5 = new Operator("Operator2", 2000);
         Operator operator6 = new Operator("Operator2", 1000);
-        Operator operator7 = new Operator("Operator2", 4000);
-
+        Operator operator7 = new Operator("Operator1", 4000);
+        Operator operator8 = new Operator("Operator10", 2000);
+        Operator operator9 = new Operator("Operator10", 1000);
+        Operator operator10 = new Operator("Operator10", 4000);
         Manager manager1 = new Manager("Valera", 50000);
         TopManager topManager1 = new TopManager("Michail", 200000);
 
@@ -24,8 +26,11 @@ public class Main {
         company1.hire(operator5);
         company1.hire(operator6);
         company1.hire(operator7);
-//        company1.hire(manager1);
-//        company1.hire(topManager1);
+        company1.hire(operator8);
+        company1.hire(operator9);
+        company1.hire(operator10);
+        company1.hire(manager1);
+        company1.hire(topManager1);
 
 //      Создание листа с рандомными сотрудниками для массового добавления в компанию методом в классе компании.
 //        ListToAdd.addEmployeesToArrayList();

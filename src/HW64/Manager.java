@@ -36,5 +36,4 @@ public class Manager implements Employee {
     public int compareTo(Employee employee) {
         return Double.compare(getSalary(), employee.getSalary());
     }
-
 }
