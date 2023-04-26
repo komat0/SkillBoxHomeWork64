@@ -26,9 +26,17 @@ public class Main {
 //        company1.employeesSize();
 
         company1.printEmployeesSize();
-        for (int i = 0; i < company1.getEmployeesSize() / 2; i++) {
+
+        int companyEmployeesCount = company1.getEmployeesSize();
+        for (int i = 0; i < companyEmployeesCount / 2; i++) {
             int randomChooser = (int) (1 + (Math.random() * company1.getEmployeesSize()));
-//            company1.retire(Employee re);
+            Employee toDelete = company1.getEmployerByIndex(i);
+            company1.retire(toDelete);
         }
+        company1.printEmployeesSize();
+        System.out.println("====");
+        company1.getLowestSalaryStaff(10);
+        System.out.println("====");
+        company1.getTopSalaryStaff(10);
     }
 }

@@ -77,5 +77,9 @@ public class Company {
     public void printEmployeesSize() {
         System.out.println(employees.size());
     }
+
+    public Employee getEmployerByIndex(int i) {
+        return employees.get(i);
+    }
 }
 
