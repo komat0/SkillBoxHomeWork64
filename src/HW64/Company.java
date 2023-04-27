@@ -83,8 +83,8 @@ public class Company {
     }
 
     public void sortColl() {
-//        employees.sort(Comparator.naturalOrder());
-        Comparator.comparing(Employee::getName).thenComparing(Employee::getSalary);
+        employees.sort(Comparator.comparing((Employee employee) -> employee.getSalary())
+                .thenComparing(employee1 -> employee1.getName()));
     }
 }
 
